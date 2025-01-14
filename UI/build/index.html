@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <section class="p-24">
+        <h1 class="text-3xl text-center font-bold text-green-400 mb-12">Irish Flower Classification</h1>
+        <form 
+        id="flowerForm"
+        class="mx-auto w-[80%] max-w-[500px] flex flex-col items-center mb-12"
+        >
+            <div class="w-[100%] mb-4">
+                <label for="" class="flex mb-1">Sepal Length (cm)</label>
+                <input 
+                name="sepal_length" 
+                id="" 
+                placeholder="Enter sepal length in cm"
+                class="px-3 py-1 w-[100%] border rounded-sm border-green-200 focus:outline-none focus:border-green-400"
+                >
+            </div>
+            <div class="w-[100%] mb-4">
+                <label for="" class="flex mb-1">Sepal Width (cm)</label>
+                <input 
+                name="sepal_width" 
+                id="" 
+                placeholder="Enter sepal width in cm"
+                class="px-3 py-1 w-[100%] border rounded-sm border-green-200 focus:outline-none focus:border-green-400" 
+                >
+            </div>
+            <div class="w-[100%] mb-4">
+                <label for="" class="flex mb-1">Petal Length (cm)</label>
+                <input 
+                name="petal_length" 
+                id="" 
+                placeholder="Enter petal length in cm"
+                class="px-3 py-1 w-[100%] border rounded-sm border-green-200 focus:outline-none focus:border-green-400" 
+                >
+            </div>
+            <div class="w-[100%] mb-4">
+                <label for="" class="flex mb-1">Petal Width (cm)</label>
+                <input 
+                name="petal_width" 
+                id="" 
+                placeholder="Enter petal width in cm"
+                class="px-3 py-1 w-[100%] border rounded-sm border-green-200 focus:outline-none focus:border-green-400" 
+                >
+            </div>
+            <button class="bg-green-400 rounded-md px-5 py-2">Classify</button>
+        </form>
+        <div class="mx-auto w-[80%] max-w-[500px]">
+            <p>This specie is Irish flower is: <em class="text-xl font-semibold">Ludacris</em> </p>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
