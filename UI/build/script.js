@@ -9,21 +9,21 @@ form.addEventListener("submit", (e) => {
    formData = new FormData(e.target)
    formDataObject = Object.fromEntries(formData)
    
-//    console.log(formDataObject);
+   console.log(formDataObject);
 
-fetch(url, {
-    method: "POST",
-    headers: {
-        "Content-Type": "application/json"
-    },
-    body: JSON.stringify(formDataObject)
-})
-.then(res => res.json())
-.then((data) => {
-    console.log(data);
-    specie.innerHTML = data["specie"]
-    
-})
-.catch(error => console.log("Error", error))
+    fetch(url, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(formDataObject)
+    })
+    .then(res => res.json())
+    .then((data) => {
+        console.log(data);
+        specie.innerHTML = data["specie"]
+        
+    })
+    .catch(error => console.log("Error", error))
    
 });

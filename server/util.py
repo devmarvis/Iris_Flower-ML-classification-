@@ -11,12 +11,17 @@ def load_saved_artifacts():
     print("loading saved artifacts...start")
     global __model, __class_number_to_specie
 
-    with open("./artifacts/num_to_specie_dict.json", "r") as f:
+    with open("num_to_specie_dict.json", "r") as f:
         __class_number_to_specie = json.load(f)
 
     if __model is None:
-        with open("./artifacts/classifier.pkl", "rb") as f:
-            __model = joblib.load(f)
+        try:
+            with open("classifier.pkl", "rb") as f:
+                __model = joblib.load(f)
+        except:
+            print("Couldn't load model")
+
+
 
     print("loading saved artifacts...done")
 
