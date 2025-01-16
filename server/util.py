@@ -6,17 +6,23 @@ import numpy as np
 __model = None
 __class_number_to_specie = {}
 
+import os
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+json_path = os.path.join(BASE_DIR, "num_to_specie_dict.json")
+model_path = os.path.join(BASE_DIR, "classifier.pkl")
+
 
 def load_saved_artifacts():
     print("loading saved artifacts...start")
     global __model, __class_number_to_specie
 
-    with open("num_to_specie_dict.json", "r") as f:
+    with open(json_path, "r") as f:
         __class_number_to_specie = json.load(f)
 
     if __model is None:
         try:
-            with open("classifier.pkl", "rb") as f:
+            with open(model_path, "rb") as f:
                 __model = joblib.load(f)
         except:
             print("Couldn't load model")
