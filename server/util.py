@@ -9,8 +9,8 @@ __class_number_to_specie = {}
 import os
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-json_path = os.path.join(BASE_DIR, "num_to_specie_dict.json")
-model_path = os.path.join(BASE_DIR, "classifier.pkl")
+json_path = os.path.join(BASE_DIR, "artifacts/num_to_specie_dict.json")
+model_path = os.path.join(BASE_DIR, "artifacts/classifier.pkl")
 
 
 def load_saved_artifacts():
