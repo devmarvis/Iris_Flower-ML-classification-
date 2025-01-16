@@ -6,6 +6,8 @@ from . import util
 app = Flask(__name__)
 CORS(app)
 
+util.load_saved_artifacts()
+
 @app.route("/classify_flower", methods=["GET", "POST"])
 def classify_flower():
     data = request.get_json()
@@ -18,5 +20,4 @@ def classify_flower():
 
 
 if __name__ == "__main__":
-    util.load_saved_artifacts()
     app.run(port=5005)
