@@ -1,4 +1,4 @@
-let url = "http://127.0.0.1:5005/classify_flower"
+let url = "https://iris-flower-ml-classification.onrender.com/classify_flower"
 
 form = document.getElementById("flowerForm");
 specie = document.getElementById("specie")
